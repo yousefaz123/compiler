@@ -6,4 +6,5 @@ editor.session.setMode('ace/mode/html');
 function runCode() {
   const code = editor.getValue();
   const outputElement = document.getElementById('output');
-  outputElement.innerHTML
+  outputElement.innerHTML = code;
+}
