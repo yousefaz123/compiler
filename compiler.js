@@ -64,31 +64,16 @@ function runPython(code) {
     if (Sk.builtinFiles === undefined || Sk.builtinFiles['files'][x] === undefined) {
       throw 'File not found: \'' + x + '\'';
     }
-    return Sk.builtinFiles['files'][x].skRead();
+    return Sk.builtinFiles['files'][x];
   }
 }
 
 function runHTML(code) {
-  const iframe = document.createElement('iframe');
-  iframe.style.width = '100%';
-  iframe.style.height = '100%';
-  iframe.style.border = 'none';
-  document.body.appendChild(iframe);
-
-  const doc = iframe.contentWindow.document;
-  doc.open();
-  doc.write(code);
-  doc.close();
+  const outputElement = document.getElementById('output');
+  outputElement.innerHTML = code;
 }
 
 function runJavaScript(code) {
-  const iframe = document.createElement('iframe');
-  iframe.style.width = '100%';
-  iframe.style.height = '100%';
-  iframe.style.border = 'none';
-  document.body.appendChild(iframe);
-
-  const script = document.createElement('script');
-  script.textContent = code;
-  iframe.contentWindow.document.head.appendChild(script);
-}
+  try {
+    eval(code);
+  } catch
