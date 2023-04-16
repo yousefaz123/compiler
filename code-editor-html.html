@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Python Code Editor</title>
+  <title>HTML Code Editor</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" crossorigin="anonymous"></script>
-  <script src="compiler-python.js"></script>
+  <script src="compiler-html.js"></script>
   <style>
     #editor {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      top: 50px;
+      left: 50px;
+      width: calc(100% - 100px);
       height: 300px;
+    }
+    #runBtn {
+      position: absolute;
+      top: 370px;
+      left: 50px;
     }
     #output {
       position: absolute;
-      top: 340px;
-      left: 0;
-      width: 100%;
+      top: 420px;
+      left: 50px;
+      width: calc(100% - 100px);
       height: 200px;
       border: 1px solid #000000;
       overflow: auto;
@@ -24,7 +29,14 @@
   </style>
 </head>
 <body>
-  <pre id="editor">print('Hello, World!')</pre>
+  <pre id="editor">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Web Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
   <button id="runBtn" onclick="runCode();">Run</button>
   <div id="output"></div>
 </body>
