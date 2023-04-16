@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HTML Code Editor</title>
+  <title>CSS Code Editor</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" crossorigin="anonymous"></script>
-  <script src="compiler-html.js"></script>
+  <script src="compiler-css.js"></script>
   <style>
     #editor {
       position: absolute;
@@ -29,14 +29,12 @@
   </style>
 </head>
 <body>
-  <pre id="editor">&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;My Web Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hello, World!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+  <pre id="editor">body {
+  background-color: #ffffff;
+}
+h1 {
+  color: #000000;
+}</pre>
   <button id="runBtn" onclick="runCode();">Run</button>
   <div id="output"></div>
 </body>
