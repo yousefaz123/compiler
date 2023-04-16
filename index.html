@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Compiler Repository</title>
+  <title>Code Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .language-selector {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .language-selector button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to the Compiler Repository</h1>
-  <p>
-    <a href="code-editor.html">Go to the Code Editor and Compiler</a>
-  </p>
+  <h1>Code Editor</h1>
+  
+  <div class="language-selector">
+    <button onclick="location.href = 'code-editor-js.html';">JavaScript</button>
+    <button onclick="location.href = 'code-editor-html.html';">HTML</button>
+    <button onclick="location.href = 'code-editor-python.html';">Python</button>
+    <button onclick="location.href = 'code-editor-java.html';">Java</button>
+  </div>
 </body>
 </html>
