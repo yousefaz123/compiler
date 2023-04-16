@@ -8,11 +8,8 @@ function runCode() {
   const outputElement = document.getElementById('output');
   outputElement.innerHTML = '';
 
-  const script = document.createElement('script');
-  script.innerHTML = code;
-
   try {
-    document.body.appendChild(script);
+    eval(code);
   } catch (error) {
     outputElement.innerHTML = error.toString();
   }
