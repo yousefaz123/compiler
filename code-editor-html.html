@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Python Code Editor</title>
+  <title>HTML Code Editor</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" crossorigin="anonymous"></script>
-  <script src="compiler-python.js"></script>
+  <script src="compiler-html.js"></script>
   <style>
     #editor {
       position: absolute;
@@ -24,7 +24,15 @@
   </style>
 </head>
 <body>
-  <pre id="editor">print('Hello, World!')</pre>
+  <pre id="editor">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Hello, World!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
   <button id="runBtn" onclick="runCode();">Run</button>
   <div id="output"></div>
 </body>
